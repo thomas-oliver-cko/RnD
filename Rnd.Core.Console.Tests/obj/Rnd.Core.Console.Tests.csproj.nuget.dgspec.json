@@ -1,0 +1,73 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Thomas.Oliver\\source\\repos\\Rnd\\Rnd.Core.Console.Tests\\Rnd.Core.Console.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Thomas.Oliver\\source\\repos\\Rnd\\Rnd.Core.Console.Tests\\Rnd.Core.Console.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Thomas.Oliver\\source\\repos\\Rnd\\Rnd.Core.Console.Tests\\Rnd.Core.Console.Tests.csproj",
+        "projectName": "Rnd.Core.Console.Tests",
+        "projectPath": "C:\\Users\\Thomas.Oliver\\source\\repos\\Rnd\\Rnd.Core.Console.Tests\\Rnd.Core.Console.Tests.csproj",
+        "packagesPath": "C:\\Users\\Thomas.Oliver\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Thomas.Oliver\\source\\repos\\Rnd\\Rnd.Core.Console.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Thomas.Oliver\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/ckotech/auth/19eb4fb5-8d2f-4e6d-a744-609291223762/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.0.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

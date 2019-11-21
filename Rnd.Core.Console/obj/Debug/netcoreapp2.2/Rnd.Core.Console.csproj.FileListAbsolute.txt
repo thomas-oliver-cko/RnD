@@ -1,0 +1,11 @@
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\obj\Debug\netcoreapp2.2\Rnd.Core.Console.csprojAssemblyReference.cache
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\obj\Debug\netcoreapp2.2\Rnd.Core.Console.csproj.CoreCompileInputs.cache
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\obj\Debug\netcoreapp2.2\Rnd.Core.Console.AssemblyInfoInputs.cache
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\obj\Debug\netcoreapp2.2\Rnd.Core.Console.AssemblyInfo.cs
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\bin\Debug\netcoreapp2.2\Rnd.Core.Console.deps.json
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\bin\Debug\netcoreapp2.2\Rnd.Core.Console.runtimeconfig.json
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\bin\Debug\netcoreapp2.2\Rnd.Core.Console.runtimeconfig.dev.json
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\bin\Debug\netcoreapp2.2\Rnd.Core.Console.dll
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\bin\Debug\netcoreapp2.2\Rnd.Core.Console.pdb
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\obj\Debug\netcoreapp2.2\Rnd.Core.Console.dll
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\obj\Debug\netcoreapp2.2\Rnd.Core.Console.pdb

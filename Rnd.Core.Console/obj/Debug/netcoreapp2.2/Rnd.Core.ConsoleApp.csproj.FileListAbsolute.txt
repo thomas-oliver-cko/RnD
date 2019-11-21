@@ -1,0 +1,15 @@
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\obj\Debug\netcoreapp2.2\Rnd.Core.ConsoleApp.csprojAssemblyReference.cache
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\obj\Debug\netcoreapp2.2\Rnd.Core.ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\obj\Debug\netcoreapp2.2\Rnd.Core.ConsoleApp.AssemblyInfoInputs.cache
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\obj\Debug\netcoreapp2.2\Rnd.Core.ConsoleApp.AssemblyInfo.cs
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\bin\Debug\netcoreapp2.2\appsettings.json
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\bin\Debug\netcoreapp2.2\Rnd.Core.ConsoleApp.deps.json
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\bin\Debug\netcoreapp2.2\Rnd.Core.ConsoleApp.runtimeconfig.json
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\bin\Debug\netcoreapp2.2\Rnd.Core.ConsoleApp.runtimeconfig.dev.json
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\bin\Debug\netcoreapp2.2\Rnd.Core.ConsoleApp.dll
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\bin\Debug\netcoreapp2.2\Rnd.Core.ConsoleApp.pdb
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\bin\Debug\netcoreapp2.2\Rnd.Core.Library.dll
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\bin\Debug\netcoreapp2.2\Rnd.Core.Library.pdb
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\obj\Debug\netcoreapp2.2\Rnd.Core.ConsoleApp.csproj.CopyComplete
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\obj\Debug\netcoreapp2.2\Rnd.Core.ConsoleApp.dll
+C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\obj\Debug\netcoreapp2.2\Rnd.Core.ConsoleApp.pdb

@@ -1,0 +1,18 @@
+[10:02:09 INF] This is an operation completed in 20.919600000000003 ms
+{OperationId: 80f5dd1f-b488-4b76-a103-349b70cdfb70, MachineName: "CKO-3470", ThreadId: 1}
+[10:33:43 INF] This is an operation completed in 20.831300000000002 ms
+{OperationId: c38da880-c6ee-43f0-8fab-a1179e3a75bb, MachineName: "CKO-3470", ThreadId: 1}
+[10:34:38 INF] This is an operation completed in 21.6807 ms
+{OperationId: 382a4367-2a5d-406d-8c8d-0bb7839812e2, MachineName: "CKO-3470", ThreadId: 1}
+[10:46:31 INF] This is an operation completed in 21.0102 ms
+{LineNumber: 23, FilePath: "C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\Program.cs", MemberName: "Main", OperationId: b5c7663d-7716-4946-b691-299631a0c69b, MachineName: "CKO-3470", ThreadId: 1}
+[10:48:46 INF] Test operation completed in 20.886300000000002 ms
+{LineNumber: 23, FilePath: "C:\Users\Thomas.Oliver\source\repos\Rnd\Rnd.Core.Console\Program.cs", MemberName: "Main", OperationId: 39ff60f3-623c-4130-98e0-89a3544e6494, MachineName: "CKO-3470", ThreadId: 1}
+[10:49:49 INF] Test operation completed in 21.7883 ms
+{LineNumber: 23, FilePath: "Program.cs", MemberName: "Main", OperationId: 829b4fb4-78ee-4f76-9b65-0097230e2b4f, MachineName: "CKO-3470", ThreadId: 1}
+[10:51:55 INF] Test operation completed in 21.625400000000003 ms
+{LineNumber: 23, FileName: "Program.cs", MemberName: "Main", OperationId: 51b5e68a-eba2-41ff-a793-01b62d416103, MachineName: "CKO-3470", ThreadId: 1, ApplicationName: "Console App"}
+[10:54:13 INF] Test operation completed in 20.953400000000002 ms
+{MethodName: "Main", OperationId: 70b7b725-66a6-4d71-8690-0df570d25696, MachineName: "CKO-3470", ThreadId: 1, ApplicationName: "Console App"}
+[11:57:29 INF] Test operation { var1 = 1, var2 = 2 } in completed ms
+{__2: 21.5783, MethodName: "Main", OperationId: 3fcab48f-6aa6-43be-9ea1-1b9f87759970, MachineName: "CKO-3470", ThreadId: 1, ApplicationName: "Console App"}
