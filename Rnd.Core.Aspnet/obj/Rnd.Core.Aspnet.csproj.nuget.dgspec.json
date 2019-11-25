@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Thomas.Oliver\\source\\repos\\Rnd\\Rnd.Core.Aspnet\\Rnd.Core.Aspnet.csproj": {}
+    "C:\\Code\\General\\Rnd\\Rnd.Core.Aspnet\\Rnd.Core.Aspnet.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Thomas.Oliver\\source\\repos\\Rnd\\Rnd.Core.Aspnet\\Rnd.Core.Aspnet.csproj": {
+    "C:\\Code\\General\\Rnd\\Rnd.Core.Aspnet\\Rnd.Core.Aspnet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Thomas.Oliver\\source\\repos\\Rnd\\Rnd.Core.Aspnet\\Rnd.Core.Aspnet.csproj",
+        "projectUniqueName": "C:\\Code\\General\\Rnd\\Rnd.Core.Aspnet\\Rnd.Core.Aspnet.csproj",
         "projectName": "Rnd.Core.Aspnet",
-        "projectPath": "C:\\Users\\Thomas.Oliver\\source\\repos\\Rnd\\Rnd.Core.Aspnet\\Rnd.Core.Aspnet.csproj",
+        "projectPath": "C:\\Code\\General\\Rnd\\Rnd.Core.Aspnet\\Rnd.Core.Aspnet.csproj",
         "packagesPath": "C:\\Users\\Thomas.Oliver\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Thomas.Oliver\\source\\repos\\Rnd\\Rnd.Core.Aspnet\\obj\\",
+        "outputPath": "C:\\Code\\General\\Rnd\\Rnd.Core.Aspnet\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

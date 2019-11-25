@@ -5,12 +5,22 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.DataModel;
+using Amazon.DynamoDBv2.DocumentModel;
 using Amazon.DynamoDBv2.Model;
+using AutoMapper;
+using FluentAssertions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Rnd.Core.ConsoleApp.DataGenerator;
-using Rnd.Core.ConsoleApp.DynamoDb1;
+using Rnd.Core.ConsoleApp.Dynamo.v1;
+using Rnd.Core.ConsoleApp.Dynamo.v3;
+using Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo;
+using Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo.Configuration;
+using Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo.DataObject;
+using DynamoDbClientFactory = Rnd.Core.ConsoleApp.Dynamo.v1.DynamoDbClientFactory;
+using DynamoDbService = Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo.DynamoDbService;
 
 namespace Rnd.Core.ConsoleApp
 {
@@ -28,48 +38,72 @@ namespace Rnd.Core.ConsoleApp
             Execute().GetAwaiter().GetResult();
         }
 
+        public class Client
+        {
+            public string ClientId { get; set; }
+            public string EntityId { get; set; }
+        }
+
         static async Task Execute()
         {
-            var entities = CreateAndSaveEntities(1000);
-
-            using var client = new DynamoDbClientFactory().Get();
-            var config = new DynamoDBOperationConfig()
+            var settings = new DynamoDbSettings
             {
-                OverrideTableName = TableName
+                TableName = TableName,
+                LocalUrl = new Uri("http://localhost:8000")
             };
 
-            using var context = new DynamoDBContext(client, config);
-
+            using var client = DynamoDbClientFactory.Create(settings);
             await new DynamoDbTableCreator(client, TableName).CreateTableAsync(true);
-            var table = await client.DescribeTableAsync(new DescribeTableRequest(TableName));
-            Console.WriteLine(table.Table.ItemCount);
 
-            await context.SaveAsync(entities[0], config);
+            var mapper = new Mapper(new MapperConfiguration(ctx => { ctx.AddProfile(new MappingProfile()); }));
+            var dynamoClient = new DynamoDbClient(client, new DependencyCoordinator());
+            var repo = new DynamoDbService(dynamoClient, mapper, settings);
 
             try
             {
-                var service1 = new DynamoDbLoader(client, context, TableName);
-                await service1.LoadEntitiesAsync(entities);
-                table = await client.DescribeTableAsync(new DescribeTableRequest(TableName));
-                Console.WriteLine(table.Table.ItemCount);
-                await service1.LoadEntitiesAsync(entities);
-                table = await client.DescribeTableAsync(new DescribeTableRequest(TableName));
-                Console.WriteLine(table.Table.ItemCount);
+                var entities = CreateEntities(100);
+                foreach (var entity in entities)
+                    await repo.CreateEntityAsync(entity);
 
+                var test = await repo.ReadEntitiesByClientAsync(entities[0].ClientId);
 
-                var x = await client.GetItemAsync(null, null, true, CancellationToken.None);
+                var table = (await client.DescribeTableAsync(new DescribeTableRequest(TableName))).Table;
+                var update = new UpdateTableRequest
+                {
+                    TableName = table.TableName,
+                    GlobalSecondaryIndexUpdates = new List<GlobalSecondaryIndexUpdate>
+                    {
+                        new GlobalSecondaryIndexUpdate
+                        {
+                            Create = new CreateGlobalSecondaryIndexAction
+                            {
+                                IndexName = "Test Index",
+                                ProvisionedThroughput = new ProvisionedThroughput(5,5),
+                                KeySchema = new List<KeySchemaElement>
+                                {
+                                    new KeySchemaElement("EntityId", KeyType.HASH),
+                                    new KeySchemaElement("ClientId", KeyType.RANGE)
+                                },
+                                Projection = new Projection(){ProjectionType = ProjectionType.ALL}
+                            },
+                        }
+                    }
+                };
             }
-            catch 
+            catch
             {
-                table = await client.DescribeTableAsync(new DescribeTableRequest(TableName));
+                var table = await client.DescribeTableAsync(new DescribeTableRequest(TableName));
                 Console.WriteLine(table.Table.ItemCount);
             }
         }
 
-        static List<Entity> CreateAndSaveEntities(int count)
+        static List<Entity> CreateEntities(int count, bool save = false)
         {
             var generator = new Generator();
             var entities = generator.CreateEntities(1, count, 2);
+
+            if (!save)
+                return entities;
 
             lock (lockObj)
             {

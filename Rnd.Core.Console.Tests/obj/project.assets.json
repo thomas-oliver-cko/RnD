@@ -5824,11 +5824,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Thomas.Oliver\\source\\repos\\Rnd\\Rnd.Core.Console.Tests\\Rnd.Core.Console.Tests.csproj",
+      "projectUniqueName": "C:\\Code\\General\\Rnd\\Rnd.Core.Console.Tests\\Rnd.Core.Console.Tests.csproj",
       "projectName": "Rnd.Core.Console.Tests",
-      "projectPath": "C:\\Users\\Thomas.Oliver\\source\\repos\\Rnd\\Rnd.Core.Console.Tests\\Rnd.Core.Console.Tests.csproj",
+      "projectPath": "C:\\Code\\General\\Rnd\\Rnd.Core.Console.Tests\\Rnd.Core.Console.Tests.csproj",
       "packagesPath": "C:\\Users\\Thomas.Oliver\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Thomas.Oliver\\source\\repos\\Rnd\\Rnd.Core.Console.Tests\\obj\\",
+      "outputPath": "C:\\Code\\General\\Rnd\\Rnd.Core.Console.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

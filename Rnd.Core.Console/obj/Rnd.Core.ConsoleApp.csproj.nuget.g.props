@@ -17,7 +17,8 @@
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\Thomas.Oliver\.nuget\packages\microsoft.codeanalysis.analyzers\2.6.1</PkgMicrosoft_CodeAnalysis_Analyzers>
-    <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">C:\Users\Thomas.Oliver\.nuget\packages\awssdk.core\3.3.103.62</PkgAWSSDK_Core>
+    <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">C:\Users\Thomas.Oliver\.nuget\packages\awssdk.core\3.3.103.66</PkgAWSSDK_Core>
+    <PkgAWSSDK_SecretsManager Condition=" '$(PkgAWSSDK_SecretsManager)' == '' ">C:\Users\Thomas.Oliver\.nuget\packages\awssdk.secretsmanager\3.3.101.51</PkgAWSSDK_SecretsManager>
     <PkgAWSSDK_DynamoDBv2 Condition=" '$(PkgAWSSDK_DynamoDBv2)' == '' ">C:\Users\Thomas.Oliver\.nuget\packages\awssdk.dynamodbv2\3.3.101.88</PkgAWSSDK_DynamoDBv2>
   </PropertyGroup>
 </Project>

@@ -20,7 +20,7 @@ namespace Rnd.Core.ConsoleApp.DataGenerator
 
             for (var i = 0; i < clientCount; i++)
             {
-                var clientId = Guid.NewGuid();
+                var clientId = Guid.NewGuid().ToString();
 
                 var entityCountInClient = Math.Round(entityCount * clientDistribution[i]);
 
@@ -62,18 +62,18 @@ namespace Rnd.Core.ConsoleApp.DataGenerator
             return entities;
         }
 
-        public Entity CreateEntity(Guid clientId, Guid? parentId)
+        public Entity CreateEntity(string clientId, string parentId)
         {
 
             return new Entity
             {
-                EntityId = Guid.NewGuid(),
+                EntityId = Guid.NewGuid().ToString(),
                 ClientId = clientId,
                 ParentId = parentId,
                 Name = faker.Company.CompanyName(),
                 Type = EntityType.Legal,
                 CountryCode = faker.Address.CountryCode(Iso3166Format.Alpha3),
-                Details = new Details
+                Details = new EntityDetails
                 {
                     City = faker.Address.City(),
                     CompanyNumber = faker.Random.AlphaNumeric(10),
@@ -90,13 +90,13 @@ namespace Rnd.Core.ConsoleApp.DataGenerator
 
     public class Entity
     {
-        public Guid? EntityId { get; set; }
-        public Guid ClientId { get; set; }
-        public Guid? ParentId { get; set; }
+        public string EntityId { get; set; }
+        public string ClientId { get; set; }
+        public string ParentId { get; set; }
         public string Name { get; set; }
         public EntityType Type { get; set; }
         public string CountryCode { get; set; }
-        public Details Details { get; set; }
+        public EntityDetails Details { get; set; }
     }
 
     public enum EntityType
@@ -104,7 +104,7 @@ namespace Rnd.Core.ConsoleApp.DataGenerator
         Legal
     }
 
-    public class Details
+    public class EntityDetails
     {
         public string CompanyNumber { get; set; }
         public string Industry { get; set; }

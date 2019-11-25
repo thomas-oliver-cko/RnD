@@ -184,11 +184,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Thomas.Oliver\\source\\repos\\Rnd\\Rnd.Core.Library\\Rnd.Core.Library.csproj",
+      "projectUniqueName": "C:\\Code\\General\\Rnd\\Rnd.Core.Library\\Rnd.Core.Library.csproj",
       "projectName": "Rnd.Core.Library",
-      "projectPath": "C:\\Users\\Thomas.Oliver\\source\\repos\\Rnd\\Rnd.Core.Library\\Rnd.Core.Library.csproj",
+      "projectPath": "C:\\Code\\General\\Rnd\\Rnd.Core.Library\\Rnd.Core.Library.csproj",
       "packagesPath": "C:\\Users\\Thomas.Oliver\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Thomas.Oliver\\source\\repos\\Rnd\\Rnd.Core.Library\\obj\\",
+      "outputPath": "C:\\Code\\General\\Rnd\\Rnd.Core.Library\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
