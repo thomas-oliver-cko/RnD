@@ -16,27 +16,24 @@ services:
     - "4569:4569"
     - "8080:8080"
   
-  # awscli:
-  #   image: garland/aws-cli-docker:latest
-  #   container_name: awscli
-  #   networks:
-  #     - network
-  #   depends_on:
-  #     - localstack 
-  #   volumes:
-  #     - type: bind
-  #       source: ./local
-  #       target: /data
-  #   environment:
-  #   - AWS_DEFAULT_REGION=eu-west-1
-  #   - AWS_ACCESS_KEY_ID=XX
-  #   - AWS_SECRET_ACCESS_KEY=XX
-  #   command:
-  #   - /bin/sh
-  #   - -c
-  #   - |
-  #       echo Waiting 15s for Dynamo Db to start
-  #       sleep 15
+  awscli:
+    image: garland/aws-cli-docker:latest
+    container_name: awscli
+    networks:
+      - network
+    depends_on:
+      - localstack 
+    volumes:
+      - type: bind
+        source: ./local
+        target: /data
+    environment:
+    - AWS_DEFAULT_REGION=eu-west-1
+    - AWS_ACCESS_KEY_ID=XX
+    - AWS_SECRET_ACCESS_KEY=XX
+    command:
+    - /bin/sh
+    - localstack-init.sh
         
 networks:
   network:

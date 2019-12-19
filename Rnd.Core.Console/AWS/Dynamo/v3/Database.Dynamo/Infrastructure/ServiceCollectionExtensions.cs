@@ -1,6 +1,5 @@
 ﻿using Amazon.DynamoDBv2.DataModel;
 using Microsoft.Extensions.DependencyInjection;
-using Rnd.Core.ConsoleApp.Dynamo.v3.Database.Contracts;
 using Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo.Configuration;
 
 namespace Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo.Infrastructure
@@ -18,7 +17,6 @@ namespace Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo.Infrastructure
                     new DynamoDBOperationConfig {OverrideTableName = settings.TableName});
             });
 
-            services.AddSingleton<IEntityCommandRepository, DynamoDbRepository>();
         }
     }
 }
