@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Code\\General\\Rnd\\Rnd.Core.Console\\Rnd.Core.ConsoleApp.csproj": {}
+    "D:\\Work\\RnD\\Rnd.Core.Console\\Rnd.Core.ConsoleApp.csproj": {}
   },
   "projects": {
-    "C:\\Code\\General\\Rnd\\Rnd.Core.Console\\Rnd.Core.ConsoleApp.csproj": {
+    "D:\\Work\\RnD\\Rnd.Core.Console\\Rnd.Core.ConsoleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Code\\General\\Rnd\\Rnd.Core.Console\\Rnd.Core.ConsoleApp.csproj",
+        "projectUniqueName": "D:\\Work\\RnD\\Rnd.Core.Console\\Rnd.Core.ConsoleApp.csproj",
         "projectName": "Rnd.Core.ConsoleApp",
-        "projectPath": "C:\\Code\\General\\Rnd\\Rnd.Core.Console\\Rnd.Core.ConsoleApp.csproj",
-        "packagesPath": "C:\\Users\\Thomas.Oliver\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\General\\Rnd\\Rnd.Core.Console\\obj\\",
+        "projectPath": "D:\\Work\\RnD\\Rnd.Core.Console\\Rnd.Core.ConsoleApp.csproj",
+        "packagesPath": "C:\\Users\\tomso\\.nuget\\packages\\",
+        "outputPath": "D:\\Work\\RnD\\Rnd.Core.Console\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Thomas.Oliver\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tomso\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,14 +25,13 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.myget.org/F/ckotech/auth/19eb4fb5-8d2f-4e6d-a744-609291223762/api/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Code\\General\\Rnd\\Rnd.Core.Library\\Rnd.Core.Library.csproj": {
-                "projectPath": "C:\\Code\\General\\Rnd\\Rnd.Core.Library\\Rnd.Core.Library.csproj"
+              "D:\\Work\\RnD\\Rnd.Core.Library\\Rnd.Core.Library.csproj": {
+                "projectPath": "D:\\Work\\RnD\\Rnd.Core.Library\\Rnd.Core.Library.csproj"
               }
             }
           }
@@ -50,9 +49,17 @@
               "target": "Package",
               "version": "[3.3.101.88, )"
             },
+            "AWSSDK.SQS": {
+              "target": "Package",
+              "version": "[3.3.102.47, )"
+            },
             "AWSSDK.SecretsManager": {
               "target": "Package",
               "version": "[3.3.101.51, )"
+            },
+            "AWSSDK.SimpleNotificationService": {
+              "target": "Package",
+              "version": "[3.3.101.104, )"
             },
             "App.Metrics": {
               "target": "Package",
@@ -126,27 +133,33 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Code\\General\\Rnd\\Rnd.Core.Library\\Rnd.Core.Library.csproj": {
+    "D:\\Work\\RnD\\Rnd.Core.Library\\Rnd.Core.Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Code\\General\\Rnd\\Rnd.Core.Library\\Rnd.Core.Library.csproj",
+        "projectUniqueName": "D:\\Work\\RnD\\Rnd.Core.Library\\Rnd.Core.Library.csproj",
         "projectName": "Rnd.Core.Library",
-        "projectPath": "C:\\Code\\General\\Rnd\\Rnd.Core.Library\\Rnd.Core.Library.csproj",
-        "packagesPath": "C:\\Users\\Thomas.Oliver\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\General\\Rnd\\Rnd.Core.Library\\obj\\",
+        "projectPath": "D:\\Work\\RnD\\Rnd.Core.Library\\Rnd.Core.Library.csproj",
+        "packagesPath": "C:\\Users\\tomso\\.nuget\\packages\\",
+        "outputPath": "D:\\Work\\RnD\\Rnd.Core.Library\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Thomas.Oliver\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tomso\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -154,8 +167,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.myget.org/F/ckotech/auth/19eb4fb5-8d2f-4e6d-a744-609291223762/api/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
@@ -179,10 +191,16 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
