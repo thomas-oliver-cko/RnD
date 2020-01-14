@@ -9,7 +9,7 @@ using Amazon.DynamoDBv2.DataModel;
 using Amazon.DynamoDBv2.DocumentModel;
 using Amazon.DynamoDBv2.Model;
 
-namespace Rnd.Core.ConsoleApp.Dynamo.v2
+namespace Rnd.Core.ConsoleApp.AWS.Dynamo.v2
 {
     interface IDynamoDbService
     {
@@ -26,7 +26,7 @@ namespace Rnd.Core.ConsoleApp.Dynamo.v2
         readonly string tableName;
 
         public DynamoDbService(IAmazonDynamoDB client, IDynamoDBContext context, DynamoDbSettings settings)
-            : this(client, context, settings?.TableName)
+            : this(client, context, settings.TableName)
         {
         }
 
@@ -37,6 +37,7 @@ namespace Rnd.Core.ConsoleApp.Dynamo.v2
 
             if (string.IsNullOrEmpty(tableName))
                 throw new ArgumentException(nameof(tableName));
+
             this.tableName = tableName;
         }
 

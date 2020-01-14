@@ -2,7 +2,7 @@
 using Amazon.DynamoDBv2;
 using Amazon.Runtime;
 
-namespace Rnd.Core.ConsoleApp.Dynamo.v2.Client.Strategies
+namespace Rnd.Core.ConsoleApp.AWS.Dynamo.v2.Client.Strategies
 {
     class DynamoDbLocalStackClientStrategy : IDynamoDbClientStrategy
     {

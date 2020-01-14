@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.Model;
 
-namespace Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo
+namespace Rnd.Core.ConsoleApp.AWS.Dynamo.v3.Database.Dynamo
 {
     interface IDynamoDbClient
     {

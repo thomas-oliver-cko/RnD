@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Threading.Tasks;
 
-namespace Rnd.Core.ConsoleApp.Dynamo.v1
+namespace Rnd.Core.ConsoleApp.AWS.Dynamo.v1
 {
     public class DynamoDbMetrics
     {

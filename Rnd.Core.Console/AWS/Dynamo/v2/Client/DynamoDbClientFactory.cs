@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using Amazon.DynamoDBv2;
-using Rnd.Core.ConsoleApp.Dynamo.v2.Client.Strategies;
+using Rnd.Core.ConsoleApp.AWS.Dynamo.v2.Client.Strategies;
 
-namespace Rnd.Core.ConsoleApp.Dynamo.v2.Client
+namespace Rnd.Core.ConsoleApp.AWS.Dynamo.v2.Client
 {
     public interface IDynamoDbClientFactory
     {

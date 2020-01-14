@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.Model;
 using AutoMapper;
+using Rnd.Core.ConsoleApp.AWS.Dynamo.v3.Database.Dynamo.Configuration;
+using Rnd.Core.ConsoleApp.AWS.Dynamo.v3.Database.Dynamo.DataObject;
 using Rnd.Core.ConsoleApp.DataGenerator;
-using Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo.Configuration;
-using Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo.DataObject;
 
-namespace Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo
+namespace Rnd.Core.ConsoleApp.AWS.Dynamo.v3.Database.Dynamo
 {
     class DynamoDbService 
     {

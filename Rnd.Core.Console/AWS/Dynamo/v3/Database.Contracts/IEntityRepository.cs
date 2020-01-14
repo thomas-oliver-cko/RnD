@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Rnd.Core.ConsoleApp.DataGenerator;
 
-namespace Rnd.Core.ConsoleApp.Dynamo.v3.Database.Contracts
+namespace Rnd.Core.ConsoleApp.AWS.Dynamo.v3.Database.Contracts
 {
     public interface IEntityCommandRepository
     {

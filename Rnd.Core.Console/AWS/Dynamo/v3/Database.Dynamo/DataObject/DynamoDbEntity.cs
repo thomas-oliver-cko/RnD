@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Amazon.DynamoDBv2.Model;
 
-namespace Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo.DataObject
+namespace Rnd.Core.ConsoleApp.AWS.Dynamo.v3.Database.Dynamo.DataObject
 {
     public class DynamoDbEntity : IToAttributeValues
     {
-        public string EntityId { get; set; }
-        public string ClientId { get; set; }
-        public string ParentId { get; set; }
-        public string Name { get; set; }
-        public string Type { get; set; }
-        public string CountryCode { get; set; }
-        public DynamoDbEntityDetails Details { get; set; }
+        public string? EntityId { get; set; }
+        public string? ClientId { get; set; }
+        public string? ParentId { get; set; }
+        public string? Name { get; set; }
+        public string? Type { get; set; }
+        public string? CountryCode { get; set; }
+        public DynamoDbEntityDetails? Details { get; set; }
 
         public Dictionary<string, AttributeValue> ToAttributeValues()
         {
@@ -30,7 +29,7 @@ namespace Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo.DataObject
             return values;
         }
 
-        public static DynamoDbEntity FromAttributeValues(Dictionary<string, AttributeValue> values)
+        public static DynamoDbEntity? FromAttributeValues(Dictionary<string, AttributeValue> values)
         {
             if (values is null)
                 return null;
@@ -50,14 +49,14 @@ namespace Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo.DataObject
 
     public class DynamoDbEntityDetails : IToAttributeValues
     {
-        public string CompanyNumber { get; set; }
-        public string Industry { get; set; }
-        public string TaxNumber { get; set; }
-        public string Line1 { get; set; }
-        public string Line2 { get; set; }
-        public string State { get; set; }
-        public string City { get; set; }
-        public string Postcode { get; set; }
+        public string? CompanyNumber { get; set; }
+        public string? Industry { get; set; }
+        public string? TaxNumber { get; set; }
+        public string? Line1 { get; set; }
+        public string? Line2 { get; set; }
+        public string? State { get; set; }
+        public string? City { get; set; }
+        public string? Postcode { get; set; }
 
         public Dictionary<string, AttributeValue> ToAttributeValues()
         {
@@ -75,7 +74,7 @@ namespace Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo.DataObject
             return values;
         }
 
-        public static DynamoDbEntityDetails FromAttributeValues(Dictionary<string, AttributeValue> values)
+        public static DynamoDbEntityDetails? FromAttributeValues(Dictionary<string, AttributeValue>? values)
         {
             if (values is null)
                 return null;
@@ -101,7 +100,7 @@ namespace Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo.DataObject
 
     public static class AttributeValueDictionaryExtensions
     {
-        public static void AddAttributeValue(this Dictionary<string, AttributeValue> values, string name, string value)
+        public static void AddAttributeValue(this Dictionary<string, AttributeValue> values, string name, string? value)
         {
             if (string.IsNullOrWhiteSpace(name)) throw new ArgumentException(nameof(name));
 
@@ -111,7 +110,7 @@ namespace Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo.DataObject
             values.Add(name, new AttributeValue{S = value});
         }
 
-        public static void AddAttributeValue(this Dictionary<string, AttributeValue> values, string name, IToAttributeValues value)
+        public static void AddAttributeValue(this Dictionary<string, AttributeValue> values, string name, IToAttributeValues? value)
         {
             if (string.IsNullOrWhiteSpace(name)) throw new ArgumentException(nameof(name));
 
@@ -130,7 +129,7 @@ namespace Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo.DataObject
             return value?.S;
         }
 
-        public static Dictionary<string, AttributeValue> GetAttributeValues(this Dictionary<string, AttributeValue> values, string key)
+        public static Dictionary<string, AttributeValue>? GetAttributeValues(this Dictionary<string, AttributeValue> values, string key)
         {
             if (string.IsNullOrWhiteSpace(key)) throw new ArgumentException(nameof(key));
 

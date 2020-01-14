@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 
-namespace Rnd.Core.ConsoleApp.Dynamo.v3
+namespace Rnd.Core.ConsoleApp.AWS.Dynamo.v3
 {
     /// <summary>
     ///     Class with extension methods on <see cref="IDependencyCoordinator"/>
@@ -24,8 +24,8 @@ namespace Rnd.Core.ConsoleApp.Dynamo.v3
         public static Task<TResult> CallDependency<TResult>(
             this IDependencyCoordinator coordinator,
             Func<Task<TResult>> work,
-            [CallerMemberName] string name = null,
-            Action<TResult, Dictionary<string, object>> addMetadataFunc = null)
+            [CallerMemberName] string? name = null,
+            Action<TResult, Dictionary<string, object>>? addMetadataFunc = null)
         {
             var metadata = new DependencyMetadata<TResult>(name, addMetadataFunc);
             return coordinator.ExecuteAsync(work, metadata);
@@ -42,8 +42,8 @@ namespace Rnd.Core.ConsoleApp.Dynamo.v3
         public static Task CallDependency(
             this IDependencyCoordinator coordinator,
             Func<Task> work,
-            [CallerMemberName] string name = null,
-            Dictionary<string, object> additionalMetadata = null)
+            [CallerMemberName] string? name = null,
+            Dictionary<string, object>? additionalMetadata = null)
         {
             var metadata = new DependencyMetadata(name, additionalMetadata);
             return coordinator.ExecuteAsync(work, metadata);
@@ -67,7 +67,7 @@ namespace Rnd.Core.ConsoleApp.Dynamo.v3
         /// </summary>
         /// <param name="dependencyName">The name of the dependency call</param>
         /// <param name="additionalMetadata">Additional metadata for the dependency</param>
-        public DependencyMetadata(string dependencyName, Dictionary<string, object> additionalMetadata = null)
+        public DependencyMetadata(string dependencyName, Dictionary<string, object>? additionalMetadata = null)
         {
             DependencyName = dependencyName;
             AdditionalMetadata = additionalMetadata ?? new Dictionary<string, object>();
@@ -97,7 +97,7 @@ namespace Rnd.Core.ConsoleApp.Dynamo.v3
         ///     Constructor to create an instance of <see cref="DependencyMetadata{TResult}"/>
         /// </summary>
         /// <param name="addMetadataFunc">builds metadata from the result</param>
-        public DependencyMetadata(Action<TResult, Dictionary<string, object>> addMetadataFunc = null)
+        public DependencyMetadata(Action<TResult, Dictionary<string, object>>? addMetadataFunc = null)
         {
             this.addMetadataFunc = addMetadataFunc;
         }
@@ -107,7 +107,7 @@ namespace Rnd.Core.ConsoleApp.Dynamo.v3
         /// </summary>
         /// <param name="dependencyName">The name of the dependency call</param>
         /// <param name="addMetadataFunc">builds metadata from the result</param>
-        public DependencyMetadata(string dependencyName, Action<TResult, Dictionary<string, object>> addMetadataFunc = null)
+        public DependencyMetadata(string dependencyName, Action<TResult, Dictionary<string, object>>? addMetadataFunc = null)
             : base(dependencyName)
         {
             this.addMetadataFunc = addMetadataFunc;
@@ -148,8 +148,6 @@ namespace Rnd.Core.ConsoleApp.Dynamo.v3
     /// </summary>
     public class DependencyCoordinator : IDependencyCoordinator
     {
-        readonly ILogger<DependencyCoordinator> log;
-
         /// <summary>
         ///     Constructs an instance of <see cref="DependencyCoordinator"/>
         /// </summary>

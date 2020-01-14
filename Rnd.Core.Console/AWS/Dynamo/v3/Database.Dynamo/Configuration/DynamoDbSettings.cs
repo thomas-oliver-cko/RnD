@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo.Configuration
+namespace Rnd.Core.ConsoleApp.AWS.Dynamo.v3.Database.Dynamo.Configuration
 {
     public class DynamoDbSettings
     {

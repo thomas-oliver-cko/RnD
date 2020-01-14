@@ -1,8 +1,8 @@
 ﻿using Amazon.DynamoDBv2.DataModel;
 using Microsoft.Extensions.DependencyInjection;
-using Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo.Configuration;
+using Rnd.Core.ConsoleApp.AWS.Dynamo.v3.Database.Dynamo.Configuration;
 
-namespace Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo.Infrastructure
+namespace Rnd.Core.ConsoleApp.AWS.Dynamo.v3.Database.Dynamo.Infrastructure
 {
     public static class ServiceCollectionExtensions
     {

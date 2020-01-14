@@ -1,9 +1,8 @@
 ﻿using System;
 using Amazon;
 using Amazon.DynamoDBv2;
-using Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo.Configuration;
 
-namespace Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo
+namespace Rnd.Core.ConsoleApp.AWS.Dynamo.v3.Database.Dynamo.Configuration
 {
     static class DynamoDbClientFactory
     {

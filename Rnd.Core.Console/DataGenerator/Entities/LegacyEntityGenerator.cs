@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Threading;
 using System.Threading.Tasks;
-using Amazon;
 using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.DocumentModel;
 using Amazon.DynamoDBv2.Model;
@@ -13,13 +11,12 @@ using Amazon.Runtime;
 using CsvHelper;
 using CsvHelper.Configuration;
 using Newtonsoft.Json;
-using Rnd.Core.ConsoleApp.DataGenerator;
 
-namespace Rnd.Core.ConsoleApp
+namespace Rnd.Core.ConsoleApp.DataGenerator.Entities
 {
-    static class Program
+    static class LegacyEntityGenerator
     {
-        static void Main()
+        static void Generate()
         {
             var gen = new EntityGenerator();
             var entities = gen.GenerateWithInverseExponentialBinarySequence(1000, 1000000, 5);

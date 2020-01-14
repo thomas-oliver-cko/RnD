@@ -2,7 +2,7 @@
 using Amazon.Runtime;
 using Newtonsoft.Json;
 
-namespace Rnd.Core.ConsoleApp.Dynamo.v3.Database.Dynamo
+namespace Rnd.Core.ConsoleApp.AWS.Dynamo.v3.Database.Dynamo
 {
     class DynamoDbCallException : Exception
     {
