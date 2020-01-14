@@ -1,6 +1,7 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using Rnd.Core.ConsoleApp.DataGenerator;
+using Rnd.Core.ConsoleApp.DataGenerator.Entities;
 
 namespace Rnd.Core.ConsoleApp.AWS.Dynamo.v3.Database.Contracts
 {

@@ -9,6 +9,7 @@ using AutoMapper;
 using Rnd.Core.ConsoleApp.AWS.Dynamo.v3.Database.Dynamo.Configuration;
 using Rnd.Core.ConsoleApp.AWS.Dynamo.v3.Database.Dynamo.DataObject;
 using Rnd.Core.ConsoleApp.DataGenerator;
+using Rnd.Core.ConsoleApp.DataGenerator.Entities;
 
 namespace Rnd.Core.ConsoleApp.AWS.Dynamo.v3.Database.Dynamo
 {

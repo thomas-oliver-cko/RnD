@@ -1,8 +1,8 @@
 ﻿using Bogus;
 using Bogus.DataSets;
-using Rnd.Core.ConsoleApp.DataGenerator.UuidGenerator;
+using Rnd.Core.ConsoleApp.DataGenerator.Entities.UuidGenerator;
 
-namespace Rnd.Core.ConsoleApp.DataGenerator
+namespace Rnd.Core.ConsoleApp.DataGenerator.Entities
 {
     class EntityGenerator : TreeGenerator<Entity>
     {

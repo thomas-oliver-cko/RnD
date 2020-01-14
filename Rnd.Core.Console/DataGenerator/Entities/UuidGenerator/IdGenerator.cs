@@ -1,6 +1,6 @@
 using System;
 
-namespace Rnd.Core.ConsoleApp.DataGenerator.UuidGenerator
+namespace Rnd.Core.ConsoleApp.DataGenerator.Entities.UuidGenerator
 {
     public static class IdGenerator
     {

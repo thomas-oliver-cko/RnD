@@ -21,7 +21,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Rnd.Core.ConsoleApp.DataGenerator.UuidGenerator
+namespace Rnd.Core.ConsoleApp.DataGenerator.Entities.UuidGenerator
 {
     public static class Base32
     {
