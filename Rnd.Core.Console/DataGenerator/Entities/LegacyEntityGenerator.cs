@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -24,7 +25,7 @@ namespace Rnd.Core.ConsoleApp.DataGenerator.Entities
             const string file = @"C:\Code\Marketplace\checkout-entities-api\performance\data\data.csv";
             File.WriteAllText(file, "");
             using var sWriter = new StreamWriter(file);
-            using var writer = new CsvWriter(sWriter);
+            using var writer = new CsvWriter(sWriter, CultureInfo.CurrentCulture);
             writer.Configuration.HasHeaderRecord = false;
 
             var client = new AmazonDynamoDBClient(
@@ -39,7 +40,7 @@ namespace Rnd.Core.ConsoleApp.DataGenerator.Entities
             const string idFile = @"C:\Code\Marketplace\checkout-entities-api\performance\data\ids.csv";
             File.WriteAllText(idFile, "");
             using var idSWriter = new StreamWriter(idFile);
-            using var idWriter = new CsvWriter(idSWriter);
+            using var idWriter = new CsvWriter(idSWriter, CultureInfo.CurrentCulture);
             idWriter.Configuration.RegisterClassMap<EntityIdMap>();
 
             var data = new Entity[25];

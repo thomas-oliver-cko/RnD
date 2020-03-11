@@ -40,32 +40,4 @@ namespace Rnd.Core.ConsoleApp.DataGenerator.Entities
             };
         }
     }
-
-    public class Entity
-    {
-        public string? EntityId { get; set; }
-        public string? ClientId { get; set; }
-        public string? ParentId { get; set; }
-        public string? Name { get; set; }
-        public EntityType Type { get; set; }
-        public string? CountryCode { get; set; }
-        public EntityDetails? Details { get; set; }
-    }
-
-    public enum EntityType
-    {
-        Legal
-    }
-
-    public class EntityDetails
-    {
-        public string? CompanyNumber { get; set; }
-        public string? Industry { get; set; }
-        public string? TaxNumber { get; set; }
-        public string? Line1 { get; set; }
-        public string? Line2 { get; set; }
-        public string? State { get; set; }
-        public string? City { get; set; }
-        public string? Postcode { get; set; }
-    }
 }

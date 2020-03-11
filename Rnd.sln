@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rnd.Core.Console.Tests", "R
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rnd.Core.Aspnet", "Rnd.Core.Aspnet\Rnd.Core.Aspnet.csproj", "{F3AC9846-63F5-48DD-8349-67979A152525}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rnd.Core.Lambda.DynamoDb", "Rnd.Core.Lambda.DynamoDb\Rnd.Core.Lambda.DynamoDb.csproj", "{0ED7D215-AAED-4410-A663-63FFE2552921}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,10 +29,10 @@ Global
 		{F3AC9846-63F5-48DD-8349-67979A152525}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3AC9846-63F5-48DD-8349-67979A152525}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3AC9846-63F5-48DD-8349-67979A152525}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9452BB27-285C-4488-9072-7A685B5296C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9452BB27-285C-4488-9072-7A685B5296C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9452BB27-285C-4488-9072-7A685B5296C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9452BB27-285C-4488-9072-7A685B5296C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ED7D215-AAED-4410-A663-63FFE2552921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ED7D215-AAED-4410-A663-63FFE2552921}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ED7D215-AAED-4410-A663-63FFE2552921}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ED7D215-AAED-4410-A663-63FFE2552921}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

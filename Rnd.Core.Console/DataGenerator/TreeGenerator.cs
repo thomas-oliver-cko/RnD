@@ -36,20 +36,20 @@ namespace Rnd.Core.ConsoleApp.DataGenerator
             bool addRandomness = true)
         {
             var calculatedHorizontalDist = GetDistribution(horizontalCount, horizontalDistribution, addRandomness);
+            double nonRootCount = totalCount - horizontalCount;
 
             for (var i = 0; i < horizontalCount; i++)
             {
                 var root = CreateRoot();
 
-                var verticalCountPerColumn = Math.Round(totalCount * calculatedHorizontalDist[i]);
-                var calculatedVerticalDistribution =
-                    GetDistribution(verticalCount, verticalDistribution, addRandomness);
+                var verticalCountPerColumn = (int)Math.Round(nonRootCount * calculatedHorizontalDist[i]);
+                var calculatedVerticalDistribution = GetDistribution(verticalCount, verticalDistribution, addRandomness);
 
                 var elementsInLevel = new List<T>();
 
                 for (var j = 0; j < verticalCount; j++)
                 {
-                    var countInLevel = Math.Round(verticalCountPerColumn * calculatedVerticalDistribution[j]);
+                    var countInLevel = (int)Math.Round(verticalCountPerColumn * calculatedVerticalDistribution[j]);
 
                     if (Math.Abs(countInLevel) < double.Epsilon)
                         break;
@@ -75,7 +75,7 @@ namespace Rnd.Core.ConsoleApp.DataGenerator
         {
             var calculatedDistribution = Enumerable.Range(0, count)
                 .Select(s => addRandomness 
-                    ? random.NextDouble() * distribution?[s] ?? 1 
+                    ? random.NextDouble() * (distribution?[s] ?? 1)
                     : distribution?[s] ?? 1)
                 .ToList();
 

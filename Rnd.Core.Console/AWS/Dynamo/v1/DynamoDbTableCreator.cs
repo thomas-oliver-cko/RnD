@@ -3,7 +3,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.Model;
-using Rnd.Core.ConsoleApp.DataGenerator;
 using Rnd.Core.ConsoleApp.DataGenerator.Entities;
 
 namespace Rnd.Core.ConsoleApp.AWS.Dynamo.v1
