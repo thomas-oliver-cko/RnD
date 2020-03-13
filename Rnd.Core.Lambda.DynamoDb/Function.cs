@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Amazon;
 using Amazon.DynamoDBv2;
@@ -42,10 +43,12 @@ namespace Rnd.Core.Lambda.DynamoDb
             
             try
             {
-                var response = await s3Client.GetObjectStreamAsync(s3Event.Bucket.Name, s3Event.Object.Key, null);
+                var response = await s3Client.GetObjectAsync(s3Event.Bucket.Name, s3Event.Object.Key);
 
+                response.ResponseStream.Position = 0;
+                
                 // Read csv
-                var reader = new CsvReader(new StreamReader(response), CultureInfo.CurrentCulture);
+                var reader = new CsvReader(new StreamReader(response.ResponseStream), CultureInfo.CurrentCulture);
                 reader.Configuration.Delimiter = "|";
                 reader.ReadHeader();
 
@@ -78,8 +81,6 @@ namespace Rnd.Core.Lambda.DynamoDb
             }
             catch(Exception e)
             {
-                context.Logger.LogLine($"Error getting object {s3Event.Object.Key} from bucket {s3Event.Bucket.Name}. " +
-                                       "Make sure they exist and your bucket is in the same region as this function.");
                 context.Logger.LogLine(e.Message);
                 context.Logger.LogLine(e.StackTrace);
                 throw;
