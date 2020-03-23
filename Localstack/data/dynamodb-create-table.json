@@ -1,0 +1,53 @@
+{
+    "TableName": "Entities",
+    "KeySchema": [
+        {
+            "AttributeName": "EntityId",
+            "KeyType": "HASH"
+        }
+    ],
+    "GlobalSecondaryIndexes": [
+        {
+            "IndexName": "ClientId-EntityId-Index",
+            "KeySchema": [
+                {
+                    "AttributeName": "ClientId",
+                    "KeyType": "HASH"
+                },
+                {
+                    "AttributeName": "EntityId",
+                    "KeyType": "RANGE"
+                }
+            ],
+            "Projection": {
+                "ProjectionType": "ALL"
+            },
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 5,
+                "WriteCapacityUnits": 5
+            }
+        }
+    ],
+    "AttributeDefinitions": [
+        {
+            "AttributeName": "EntityId",
+            "AttributeType": "S"
+        },
+        {
+            "AttributeName": "ClientId",
+            "AttributeType": "S"
+        }
+    ],
+    "ProvisionedThroughput": {
+        "ReadCapacityUnits": 5,
+        "WriteCapacityUnits": 5
+    },
+    "SSESpecification": {
+        "Enabled": false
+    },
+    "BillingMode": "PROVISIONED",
+    "StreamSpecification": {
+        "StreamEnabled": true,
+        "StreamViewType": "NEW_AND_OLD_IMAGES"
+    }
+}

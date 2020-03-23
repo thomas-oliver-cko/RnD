@@ -8,11 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Amazon.Lambda.Core" Version="1.1.0" />
     <PackageReference Include="Amazon.Lambda.Serialization.Json" Version="1.7.0" />
     <PackageReference Include="Amazon.Lambda.S3Events" Version="1.1.0" />
     <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.3.105.8" />
-    <PackageReference Include="AWSSDK.S3" Version="3.3.110.32" />
-    <PackageReference Include="CsvHelper" Version="15.0.1" />
   </ItemGroup>
 </Project>

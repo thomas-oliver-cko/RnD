@@ -1,0 +1,11 @@
+{
+    "LambdaFunctionConfigurations": [
+        {
+            "Id": "string",
+            "LambdaFunctionArn": "string",
+            "Events": [
+                "s3:ObjectCreated:*"
+            ]
+        }
+    ]
+}

@@ -10,9 +10,9 @@
   <ItemGroup>
     <PackageReference Include="AutoBogus" Version="2.8.0" />
     <PackageReference Include="AutoMapper" Version="9.0.0" />
-    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.3.105.8" />
-    <PackageReference Include="AWSSDK.S3" Version="3.3.110.32" />
-    <PackageReference Include="AWSSDK.SecretsManager" Version="3.3.102.6" />
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.3.105.9" />
+    <PackageReference Include="AWSSDK.S3" Version="3.3.110.33" />
+    <PackageReference Include="AWSSDK.SecretsManager" Version="3.3.102.7" />
     <PackageReference Include="BenchmarkDotNet" Version="0.12.0" />
     <PackageReference Include="Bogus" Version="29.0.1" />
     <PackageReference Include="CsvHelper" Version="15.0.1" />
@@ -27,6 +27,14 @@
     <None Update="appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AWS\S3\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Rnd.Core.Lambda.DynamoDb\Rnd.Core.Lambda.DynamoDb.csproj" />
   </ItemGroup>
 
 </Project>
