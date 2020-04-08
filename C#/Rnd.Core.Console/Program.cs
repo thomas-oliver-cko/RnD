@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace Rnd.Core.ConsoleApp
 {
@@ -11,24 +10,15 @@ namespace Rnd.Core.ConsoleApp
     {
         static async Task Main()
         {
-            var entries = new List<JObject>();
-            var sr = new StreamReader(@"C:\Code\Data\entities.json");
-            var reader = new JsonTextReader(sr);
-            var serialiser = new JsonSerializer();
+            var path = @"C:\Code\Data\GetEntitiesByClient.csv";
+            var entries = File.ReadAllLines(path).ToList();
+            var header = entries[0];
+            entries.RemoveAt(0);
 
-            while (reader.Read())
-            {
-                if (reader.TokenType != JsonToken.StartObject)
-                    continue;
+            entries.Shuffle();
 
-                var obj = serialiser.Deserialize<JObject>(reader);
-                entries.Add(obj);
-
-                if (entries.Count != 1000) continue;
-
-                File.WriteAllText($@"C:\Code\Data\Entities\dynamo-db-data-{Guid.NewGuid()}.json", JsonConvert.SerializeObject(entries));
-                entries.Clear();
-            }
+            entries = new[] {header}.Concat(entries).ToList();
+            File.WriteAllLines(path, entries);
         }
     }
 }
