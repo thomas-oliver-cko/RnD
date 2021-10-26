@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rnd.Core.Aspnet", "Rnd.Core
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rnd.Core.Lambda.DynamoDb", "Rnd.Core.Lambda.DynamoDb\Rnd.Core.Lambda.DynamoDb.csproj", "{0ED7D215-AAED-4410-A663-63FFE2552921}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rnd.Core.AwsAppConfig", "Rnd.Core.AwsAppConfig\Rnd.Core.AwsAppConfig.csproj", "{2686021C-6AE9-496C-B68C-F8DC03791492}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RnD.Docker", "RnD.Docker\RnD.Docker.csproj", "{80B5B1B4-0B8F-46CD-BD2E-0FDF75E8C9C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{0ED7D215-AAED-4410-A663-63FFE2552921}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0ED7D215-AAED-4410-A663-63FFE2552921}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0ED7D215-AAED-4410-A663-63FFE2552921}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2686021C-6AE9-496C-B68C-F8DC03791492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2686021C-6AE9-496C-B68C-F8DC03791492}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2686021C-6AE9-496C-B68C-F8DC03791492}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2686021C-6AE9-496C-B68C-F8DC03791492}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80B5B1B4-0B8F-46CD-BD2E-0FDF75E8C9C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80B5B1B4-0B8F-46CD-BD2E-0FDF75E8C9C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80B5B1B4-0B8F-46CD-BD2E-0FDF75E8C9C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80B5B1B4-0B8F-46CD-BD2E-0FDF75E8C9C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

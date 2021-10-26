@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "RnD.Docker": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

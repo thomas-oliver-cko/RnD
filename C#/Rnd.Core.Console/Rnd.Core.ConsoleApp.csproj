@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <LangVersion>8</LangVersion>
+    <LangVersion>9</LangVersion>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
@@ -19,7 +19,10 @@
     <PackageReference Include="FluentAssertions" Version="5.10.2" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.2" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.2" />
+    <PackageReference Include="NEST" Version="7.10.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Polly" Version="7.2.1" />
+    <PackageReference Include="Polly.Extensions.Http" Version="3.0.0" />
     <PackageReference Include="System.Threading.Channels" Version="4.7.0" />
   </ItemGroup>
 
@@ -30,6 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="AWS\DynamoStreams\" />
     <Folder Include="AWS\S3\" />
   </ItemGroup>
 

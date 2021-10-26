@@ -3,6 +3,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Rnd.Core.Aspnet.Controllers
 {
+    public class Test
+    {
+        public string Value1 { get; set; }
+        public string Value2 { get; set; }
+    }
+
+
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
@@ -15,8 +22,8 @@ namespace Rnd.Core.Aspnet.Controllers
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        [HttpGet("{value1}/{value2}")]
+        public ActionResult<string> Get([FromRoute] Test test)
         {
             return "value";
         }
