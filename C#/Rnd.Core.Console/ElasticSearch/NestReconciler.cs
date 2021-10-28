@@ -21,9 +21,8 @@ namespace Rnd.Core.ConsoleApp.ElasticSearch
                 .Handle<Exception>()
                 .WaitAndRetryAsync(3, i => TimeSpan.FromMilliseconds(100 * i));
 
-            //var connection = new ConnectionSettings("https://cko-non-prod-1567782334.k4a.bonsaisearch.net/?_bonsai_auth=eyJob3N0IjoiY2tvLW5vbi1wcm9kLTE1Njc3ODIzMzQuZXUtd2VzdC0xLmJvbnNhaXNlYXJjaC5uZXQiLCJ1c2VyIjoiZjUxemsyeDJ4diIsInBhc3N3b3JkIjoiYWdja3YwMTh1aCIsInZlcnNpb24iOiI3LjIuMCJ9");
-            var connection = new ConnectionSettings(new Uri(
-                    "https://H8kLWa2wmn:HTdFXa7jwL8pDks@cko-non-prod-1567782334.eu-west-1.bonsaisearch.net:443"));
+           var connection = new ConnectionSettings(new Uri(
+                    ""));
             client = new ElasticClient(connection);
         }
 
